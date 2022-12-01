@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <title>Aircraft Scheduling / Movement Control</title>
+
+    <meta http-equiv="REFRESH" content="90" />
+
+    <script language="JavaScript">
+      <!--
+      var imi = 0,
+        imgs = new Array("mvtpub.jpg");
+      var imgwidth, imgheight;
+
+      function PreparePage(ev) {
+        var obj;
+
+        if (imgs.length > 0) {
+          obj = document.getElementById("mvtimg");
+          obj.src = imgs[0];
+        }
+
+        if (imgs.length > 1) {
+          obj = document.getElementById("tlinks");
+          obj.style.display = "block";
+
+          obj = document.getElementById("blinks");
+          obj.style.display = "block";
+
+          obj = document.getElementById("tlink1");
+          obj.style.visibility = "hidden";
+
+          obj = document.getElementById("tlink2");
+          obj.style.visibility = "hidden";
+
+          obj = document.getElementById("blink1");
+          obj.style.visibility = "hidden";
+
+          obj = document.getElementById("blink2");
+          obj.style.visibility = "hidden";
+        } else {
+          obj = document.getElementById("tlinks");
+          obj.style.display = "none";
+
+          obj = document.getElementById("blinks");
+          obj.style.display = "none";
+        }
+
+        if (ev.addEventListener) {
+          ev.addEventListener("beforeprint", beforeprint, false);
+          ev.addEventListener("afterprint", afterprint, false);
+        } else if (ev.attachEvent) {
+          ev.attachEvent("onbeforeprint", beforeprint);
+          ev.attachEvent("onafterprint", afterprint);
+        }
+      }
+
+      function ShowImg(step) {
+        switch (parseInt(step)) {
+          case 1:
+            imi = 0;
+            break;
+          case 2:
+            if (imi > 0) imi--;
+            break;
+          case 3:
+            if (imi < imgs.length - 1) imi++;
+            break;
+          case 4:
+            imi = imgs.length - 1;
+        }
+
+        var obj = document.getElementById("mvtimg");
+        obj.src = imgs[imi];
+
+        if (imgs.length > 1) {
+          obj = document.getElementById("tlink1");
+          obj.style.visibility = "visible";
+
+          obj = document.getElementById("tlink2");
+          obj.style.visibility = "visible";
+
+          obj = document.getElementById("tlink3");
+          obj.style.visibility = "visible";
+
+          obj = document.getElementById("tlink4");
+          obj.style.visibility = "visible";
+
+          obj = document.getElementById("blink1");
+          obj.style.visibility = "visible";
+
+          obj = document.getElementById("blink2");
+          obj.style.visibility = "visible";
+
+          obj = document.getElementById("blink3");
+          obj.style.visibility = "visible";
+
+          obj = document.getElementById("blink4");
+          obj.style.visibility = "visible";
+
+          if (imi == 0) {
+            obj = document.getElementById("tlink1");
+            obj.style.visibility = "hidden";
+
+            obj = document.getElementById("tlink2");
+            obj.style.visibility = "hidden";
+
+            obj = document.getElementById("blink1");
+            obj.style.visibility = "hidden";
+
+            obj = document.getElementById("blink2");
+            obj.style.visibility = "hidden";
+          }
+
+          if (imi == imgs.length - 1) {
+            obj = document.getElementById("tlink3");
+            obj.style.visibility = "hidden";
+
+            obj = document.getElementById("tlink4");
+            obj.style.visibility = "hidden";
+
+            obj = document.getElementById("blink3");
+            obj.style.visibility = "hidden";
+
+            obj = document.getElementById("blink4");
+            obj.style.visibility = "hidden";
+          }
+        }
+      }
+
+      function beforeprint() {
+        var obj = document.getElementById("tlinks");
+        obj.style.display = "none";
+
+        obj = document.getElementById("blinks");
+        obj.style.display = "none";
+
+        obj = document.getElementById("mvtimg");
+
+        imgwidth = obj.width;
+        imgheight = obj.height;
+
+        obj.height = 660;
+        obj.width = 825;
+      }
+
+      function afterprint() {
+        var obj = document.getElementById("tlinks");
+        obj.style.display = "block";
+
+        obj = document.getElementById("blinks");
+        obj.style.display = "block";
+
+        obj = document.getElementById("mvtimg");
+
+        obj.width = imgwidth;
+        obj.height = imgheight;
+      }
+      -->
+    </script>
+  </head>
+
+  <body onLoad="PreparePage(event)">
+    <p align="center" id="tlinks">
+      <a href="#" onClick="ShowImg('1')" title="First" id="tlink1">First</a
+      >&nbsp;
+      <a href="#" onClick="ShowImg('2')" title="Prior" id="tlink2">Prior</a
+      >&nbsp;
+      <a href="#" onClick="ShowImg('3')" title="Next" id="tlink3">Next</a>&nbsp;
+      <a href="#" onClick="ShowImg('4')" title="Last" id="tlink4">Last</a>
+    </p>
+    <hr />
+    <img id="mvtimg" src="" />
+    <hr />
+    <p align="center" id="blinks">
+      <a href="#" onClick="ShowImg('1')" title="First" id="blink1">First</a
+      >&nbsp;
+      <a href="#" onClick="ShowImg('2')" title="Prior" id="blink2">Prior</a
+      >&nbsp;
+      <a href="#" onClick="ShowImg('3')" title="Next" id="blink3">Next</a>&nbsp;
+      <a href="#" onClick="ShowImg('4')" title="Last" id="blink4">Last</a>
+    </p>
+  </body>
+</html>

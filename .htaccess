@@ -1,0 +1,7 @@
+# Begin password protection #
+AuthName "Password Protected"
+Require valid-user
+AuthUserFile "/home/users/web/b2778/moo.skyleasecargocom/plot-skyleasecargo-com/.htpasswd"
+AuthType basic
+# End password protection #
+
