@@ -160,6 +160,7 @@
     <header>
       
       <h1>Aircraft Scheduling / Movement Control</h1>
+      <label id="time"></label>
     </header>
     <nav>
       <p align="center" id="tlinks" style="display: block !important;">
@@ -180,6 +181,11 @@
       <a href="#" onClick="ShowImg('2')" title="Prior" id="blink2">Prior</a>
       <a href="#" onClick="ShowImg('3')" title="Next" id="blink3">Next</a>
       <a href="#" onClick="ShowImg('4')" title="Last" id="blink4">Last</a>
+
+      <div id = "time" > - </div>
+      <script>
+        document.getElementById("time").textContent = "" + new Date();
+      </script>
     </p>
   </body>
 </html>
