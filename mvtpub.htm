@@ -5,7 +5,6 @@
     <meta http-equiv="REFRESH" content="90" />
 
     <script language="JavaScript">
-      
       var imi = 0,
         imgs = new Array("mvtpub.jpg");
       var imgwidth, imgheight;
@@ -154,27 +153,31 @@
         obj.width = imgwidth;
         obj.height = imgheight;
       }
-      
     </script>
   </head>
 
   <body onLoad="PreparePage(event)">
-    <p align="center" id="tlinks">
-      <a href="#" onClick="ShowImg('1')" title="First" id="tlink1">First</a
-      >
-      <a href="#" onClick="ShowImg('2')" title="Prior" id="tlink2">Prior</a
-      >
-      <a href="#" onClick="ShowImg('3')" title="Next" id="tlink3">Next</a>
-      <a href="#" onClick="ShowImg('4')" title="Last" id="tlink4">Last</a>
-    </p>
-    <hr />
-    <img id="mvtimg" src="" />
-    <hr />
+    <header>
+      
+      <h1>Aircraft Scheduling / Movement Control</h1>
+    </header>
+    <nav>
+      <p align="center" id="tlinks" style="display: block !important;">
+        <a href="#" onClick="ShowImg('1')" title="First" id="tlink1">First</a>
+        <a href="#" onClick="ShowImg('2')" title="Prior" id="tlink2">Prior</a>
+        <a href="#" onClick="ShowImg('3')" title="Next" id="tlink3">Next</a>
+        <a href="#" onClick="ShowImg('4')" title="Last" id="tlink4">Last</a>
+      </p>
+    </nav>
+    <main>
+      <hr />
+      <img id="mvtimg" src=""/>
+      <hr />
+    </main>
+
     <p align="center" id="blinks">
-      <a href="#" onClick="ShowImg('1')" title="First" id="blink1">First</a
-      >
-      <a href="#" onClick="ShowImg('2')" title="Prior" id="blink2">Prior</a
-      >
+      <a href="#" onClick="ShowImg('1')" title="First" id="blink1">First</a>
+      <a href="#" onClick="ShowImg('2')" title="Prior" id="blink2">Prior</a>
       <a href="#" onClick="ShowImg('3')" title="Next" id="blink3">Next</a>
       <a href="#" onClick="ShowImg('4')" title="Last" id="blink4">Last</a>
     </p>
