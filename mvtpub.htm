@@ -7,6 +7,7 @@
     <script language="JavaScript">
       var imi = 0,
         imgs = new Array("mvtpub.jpg");
+        console.log('areglo de images', imgs)
       var imgwidth, imgheight;
 
       function PreparePage(ev) {
@@ -35,13 +36,14 @@
 
           obj = document.getElementById("blink2");
           obj.style.visibility = "hidden";
-        } else {
-          obj = document.getElementById("tlinks");
-          obj.style.display = "none";
+        } 
+        // else {
+        //   obj = document.getElementById("tlinks");
+        //   obj.style.display = "none";
 
-          obj = document.getElementById("blinks");
-          obj.style.display = "none";
-        }
+        //   obj = document.getElementById("blinks");
+        //   obj.style.display = "none";
+        // }
 
         if (ev.addEventListener) {
           ev.addEventListener("beforeprint", beforeprint, false);
@@ -137,8 +139,8 @@
         imgwidth = obj.width;
         imgheight = obj.height;
 
-        obj.height = 800;
-        obj.width = 800;
+        obj.height = 700;
+        obj.width = 700;
       }
 
       function afterprint() {
@@ -173,7 +175,7 @@
     </nav>
     <main>
       <hr />
-      <img id="mvtimg" src=""/>
+      <img id="mvtimg" src="" style="max-width: 100%; min-width: auto;"/>
       <hr />
     </main>
 
